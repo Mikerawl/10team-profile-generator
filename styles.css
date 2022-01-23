@@ -1,0 +1,92 @@
+* `name`
+
+* `id`
+
+* `email`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
+}
+
+
+class Manager {
+ * `name`
+
+* `id`
+
+* `email`
+
+* `office number`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
+
+class Engineer {
+ * `name`
+
+* `id`
+
+* `email`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
+
+class Intern {
+ * `name`
+
+* `id`
+
+* `email`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
+
+class Employee {
+ * `name`
+
+* `id`
+
+* `email`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
+
+class Employee {
+ * `name`
+
+* `id`
+
+* `email`
+
+* `getName()`
+
+* `getId()`
+
+* `getEmail()`
+
+* `getRole()`&mdash;returns `'Employee'`
