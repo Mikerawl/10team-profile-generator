@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Mikerawl/10team-profile-generator/issues"
   },
-  "homepage": "https://github.com/Mikerawl/10team-profile-generator#readme"
+  "homepage": "https://github.com/Mikerawl/10team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }
