@@ -1,23 +1,28 @@
 {
-  "name": "10team-profile-generator",
+  "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "This is homework 10. It is a command line program that produce an html output",
+  "description": "app to create team profile generator ",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mikerawl/10team-profile-generator.git"
+    "url": "git+https://github.com/nicolewallace09/team-profile-generator.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Nicole Wallace",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mikerawl/10team-profile-generator/issues"
+    "url": "https://github.com/nicolewallace09/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/Mikerawl/10team-profile-generator#readme",
+  "homepage": "https://github.com/nicolewallace09/team-profile-generator#readme",
   "devDependencies": {
-    "jest": "^27.4.7"
+    "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^7.1.0"
   }
 }

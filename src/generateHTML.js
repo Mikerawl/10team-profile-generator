@@ -1,50 +1,55 @@
 // create Manager card
 const generateManager = function (manager) {
-  return `
+    return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
                 <h4>Manager</h4><i class="material-icons">content_paste</i>
             </div>
+
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
                 <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
                 <p class="office">Office Number: ${manager.officeNumber}</p>
             </div>
+
         </div>
     </div>
     `;
-};
+}
 
 // create Engineer card
 const generateEngineer = function (engineer) {
-  return `
+    return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${engineer.name}</h3>
                 <h4>Engineer</h4><i class="material-icons">laptop_mac</i>
             </div>
+
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
                 <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                 <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
             </div>
+
         </div>
     </div>
-    `;
-};
+    `
+}
 
-// create Intern card
+// create Intern card 
 const generateIntern = function (intern) {
-  return `
+    return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.name}</h3>
                 <h4>Intern</h4><i class="material-icons">assignment_ind</i>
             </div>
+
             <div class="card-body">
                 <p class="id">ID: ${intern.id}</p>
                 <p class="email">Email:<a href="mailto:${intern.email}">${intern.email}</a></p>
@@ -52,51 +57,55 @@ const generateIntern = function (intern) {
             </div>
     </div>
 </div>
-    `;
+    `
 };
 
-// push array to page
+// push array to page 
 generateHTML = (data) => {
-  // array for cards
-  pageArray = [];
 
-  for (let i = 0; i < data.length; i++) {
-    const employee = data[i];
-    const role = employee.getRole();
+    // array for cards 
+    pageArray = []; 
 
-    // call manager function
-    if (role === "Manager") {
-      const managerCard = generateManager(employee);
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole(); 
 
-      pageArray.push(managerCard);
+
+        // call manager function
+        if (role === 'Manager') {
+            const managerCard = generateManager(employee);
+
+            pageArray.push(managerCard);
+        }
+
+        // call engineer function
+        if (role === 'Engineer') {
+            const engineerCard = generateEngineer(employee);
+
+            pageArray.push(engineerCard);
+        }
+
+        // call intern function 
+        if (role === 'Intern') {
+            const internCard = generateIntern(employee);
+
+            pageArray.push(internCard);
+        }
+        
     }
 
-    // call engineer function
-    if (role === "Engineer") {
-      const engineerCard = generateEngineer(employee);
+    // joining strings 
+    const employeeCards = pageArray.join('')
 
-      pageArray.push(engineerCard);
-    }
+    // return to generated page
+    const generateTeam = generateTeamPage(employeeCards); 
+    return generateTeam;
 
-    // call intern function
-    if (role === "Intern") {
-      const internCard = generateIntern(employee);
+}
 
-      pageArray.push(internCard);
-    }
-  }
-
-  // joining strings
-  const employeeCards = pageArray.join("");
-
-  // return to generated page
-  const generateTeam = generateTeamPage(employeeCards);
-  return generateTeam;
-};
-
-// generate html page
-const generateTeamPage = function (employeeCards) {
-  return `
+// generate html page 
+const generateTeamPage = function (employeeCards) {   
+  return`
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -129,8 +138,10 @@ const generateTeamPage = function (employeeCards) {
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </html>
+
+
 `;
-};
+}
 
 // export to index
-module.exports = generateHTML;
+module.exports = generateHTML; 
