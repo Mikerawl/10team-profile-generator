@@ -81,10 +81,8 @@ const addManager = () => {
 };
 
 const addEmployee = () => {
-  console.log(`
-    =================
+  console.log(`    
     Adding employees to the team
-    =================
     `);
 
   return inquirer
